@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cvTron</title>
+</head>
+    
+<body>
+    <h1>Tính chu vi hình tròn</h1>
+    <input type="number" placeholder="Enter R" id="r">
+    <button type="button" onclick="tinhcv()">Tính</button>
+    <p id="kq"></p>
+</body>
+</html>
+<script>
+    function tinhcv(){
+        let canh= parseFloat(document.getElementById("r").value);
+        let C= 2* Math.PI *canh;
+        document.getElementById("kq").innerText="Cir = " + C
+    }
+</script>

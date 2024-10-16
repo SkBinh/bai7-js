@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACircle</title>
+</head>
+<body>
+    <h1>Tính diện tích hình tròn</h1>
+    <input type="number" placeholder="Enter R" id="r">
+    <button type="button" onclick="doi()">Enter</button>
+    <p id="result"></p>
+</body>
+</html>
+<script>
+    function doi(){
+    let canh= parseFloat(document.getElementById("r").value);
+    let A= Math.PI * Math.pow(canh,2);
+    document.getElementById("result").innerText="Area =" +A
+    }
+</script>
