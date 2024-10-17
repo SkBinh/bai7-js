@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <form method="get">
+        <div>
+            <input type="number" name="nb1" placeholder="Enter number 1">
+            <input type="number" name="nb2" placeholder="Enter number 2">
+        </div>
+        <br>
+        <div>
+            <button type="button" name="+" onclick="calculate('+')">Addition(+)</button>
+            <button type="button" name="-" onclick="calculate('-')">Subtraction(-)</button>
+            <button type="button" name="x" onclick="calculate('*')">Multiplication(X)</button>
+            <button type="button" name="/" onclick="calculate('/')">Division(/)</button>
+        </div>
+        <p id="result"></p>
+
+    </form>
+    
+</body>
+</html>
+<script>
+    function calculate(all){
+        let number1 = parseFloat(document.querySelector('input[name="nb1"]').value);
+        let number2 = parseFloat(document.querySelector('input[name="nb2"]').value);
+        let result;
+        
+        switch(all){
+            case "+":
+                result= number1 + number2;
+                break;
+            case "-":
+                result= number1 - number2;
+                break;
+            case "*":
+                result= number1 * number2;
+                break;
+            case "/":
+                if (number2 === 0){;
+                result= "cannot divide by zero !";
+                }else{
+                    result= number1 / number2;
+                }
+                break;
+            default: 
+                result= "result invalid";
+        }
+        document.getElementById("result").innerText= "Result:" + result;
+}
+</script>
